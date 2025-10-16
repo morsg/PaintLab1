@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+        <div class="top-bar">
+            <div class="page-container">
+            <div class="header_top-bar">
+            <div class="logo"> 
+            <img src="images/PaintLab.png" alt="Логотип" class="logo"> 
+         
+            </div>
+            <div class="contact-wrapper">
+            <div class="contact">
+                <p>+7 (000) 000-00-00</p>
+                <p>+7 (000) 000-00-00</p>
+            </div>
+                <div class="contact-btn">
+                <a href="basket.html">КОРЗИНА</a> <!-- Изменено на .html -->
+            </div>
+            </div>
+        </div>
+
+        <nav class="menu">
+        <div class="catalog-button">
+        <a href="catalog.html" class="dropbtn">Каталог</a> <!-- Изменено на .html -->
+    </div>
+            <div class="menu-container">
+            <a href="index.html">Главная</a> <!-- Изменено на .html -->
+            <a href="about.html">О нас</a> <!-- Изменено на .html -->
+            <a href="catalog.html">Каталог</a> <!-- Изменено на .html -->
+            <a href="contacts.html">Где нас найти</a> <!-- Изменено на .html -->
+            <a href="login.html">Вход</a> <!-- Изменено на .html -->
+            <a href="register.html">Регистрация</a> <!-- Осталось .html -->
+        </div>
+    </nav>
+    </div>
+</div>
+</header>
+
+    <section class="register">
+        <h2>Регистрация</h2>
+        <!-- Форма регистрации (не будет работать в статике) -->
+        <form onsubmit="event.preventDefault(); alert('Функция регистрации не работает в статике');">
+    <input type="text" name="username" placeholder="Логин" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+    </section>
+    
+    <footer class="footer">
+        <p>© 2025 PaintLab. Все права защищены.</p>
+    </footer>
+    <script src="js/scripts.js"></script> <!-- Подключаем JS, если нужен -->
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Подключаем основной CSS, если он содержит общие стили -->
+    <style>
+        /* Встроенные стили из оригинального файла */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .basket-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .actions a, .actions button {
+            padding: 10px 20px;
+            background-color:rgb(77, 77, 77);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        .actions a:hover, .actions button:hover {
+            background-color:rgb(100, 100, 100);
+        }
+    </style>
+</head>
+<body>
+    <section class="basket-container">
+        <h2>Корзина</h2>
+        <!-- Пример содержимого корзины (статика) -->
+        <!-- В реальной статике содержимое корзины не будет динамически подгружаться из сессии или БД -->
+        <p>Содержимое корзины подгружается из сессии (PHP). На статическом сайте отображается пример:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                    <th>Сумма</th>
+                    <th>Отмена товара</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Пример строки товара -->
+                <tr>
+                    <td>Тестовая краска</td>
+                    <td>
+                        <!-- Форма обновления количества (не будет работать на статике) -->
+                        <form onsubmit="event.preventDefault(); alert('Функция обновления не работает в статике');">
+                            <input type="hidden" name="product_id" value="1">
+                            <input type="number" name="quantity" value="2" min="1" disabled> <!-- Отключено -->
+                        </form>
+                    </td>
+                    <td>1500 ₽</td>
+                    <td>3000 ₽</td>
+                    <td>
+                        <!-- Ссылка удаления (не будет работать на статике) -->
+                        <a href="#" onclick="event.preventDefault(); alert('Функция удаления не работает в статике');">Удалить</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Тестовая эмаль</td>
+                    <td>
+                        <form onsubmit="event.preventDefault(); alert('Функция обновления не работает в статике');">
+                            <input type="hidden" name="product_id" value="2">
+                            <input type="number" name="quantity" value="1" min="1" disabled> <!-- Отключено -->
+                        </form>
+                    </td>
+                    <td>2000 ₽</td>
+                    <td>2000 ₽</td>
+                    <td>
+                        <a href="#" onclick="event.preventDefault(); alert('Функция удаления не работает в статике');">Удалить</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <strong>Итого:</strong> 5000 ₽ <!-- Пример итоговой суммы -->
+        </div>
+
+        <div class="actions">
+            <a href="index.html">На главную</a> <!-- Изменено на .html -->
+            <!-- Форма оформления заказа (не будет работать на статике) -->
+            <form onsubmit="event.preventDefault(); alert('Функция оформления заказа не работает в статике');">
+                <input type="email" name="email" placeholder="Введите ваш email" required disabled> <!-- Отключено -->
+                <button type="submit" name="checkout" disabled>Оформить заказ (PHP)</button> <!-- Отключено -->
+            </form>
+        </div>
+    </section>
+
+    <script src="js/scripts.js"></script> <!-- Подключаем основной JS, если нужен -->
+</body>
+</html>

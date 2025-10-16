@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление товарами</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="page-container">
+            <div class="header_top-bar">
+            <div class="logo"> 
+            <img src="images/PaintLab.png" alt="Логотип" class="logo"> 
+         
+            </div>
+            <div class="contact-wrapper">
+            <div class="contact">
+                <p>+7 (000) 000-00-00</p>
+                <p>+7 (000) 000-00-00</p>
+            </div>
+                <div class="contact-btn">
+                <a href="basket.html">КОРЗИНА</a> <!-- Изменено на .html -->
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <h1>Управление товарами</h1>
+    <!-- Форма добавления товара (не будет работать на статическом сайте) -->
+    <form>
+        <input type="text" name="name" placeholder="Название" required>
+        <input type="number" name="price" placeholder="Цена" required>
+        <textarea name="description" placeholder="Описание" required></textarea>
+        <input type="text" name="image" placeholder="Ссылка на изображение" required>
+        <input type="number" name="category_id" placeholder="ID категории" required>
+        <button type="submit" disabled>Добавить товар (PHP)</button> <!-- Кнопка отключена -->
+    </form>
+
+    <h2>Список товаров</h2>
+    <p>Список товаров подгружается из базы данных (PHP). На статическом сайте отображается пример:</p>
+    <ul>
+        <!-- Пример статических товаров -->
+        <li>
+            <h3>Тестовый товар 1</h3>
+            <p>Цена: 1000 руб.</p>
+            <p>Описание тестового товара 1.</p>
+            <img src="images/54714463_2.jpg" alt="Тестовый товар 1">
+        </li>
+        <li>
+            <h3>Тестовый товар 2</h3>
+            <p>Цена: 2000 руб.</p>
+            <p>Описание тестового товара 2.</p>
+            <img src="images/54714657_2.jpg" alt="Тестовый товар 2">
+        </li>
+    </ul>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

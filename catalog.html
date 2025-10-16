@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+        <div class="top-bar">
+            <div class="page-container">
+            <div class="header_top-bar">
+            <div class="logo"> 
+            <img src="images/PaintLab.png" alt="Логотип" class="logo"> 
+         
+            </div>
+            <div class="contact-wrapper">
+            <div class="contact">
+                <p>+7 (000) 000-00-00</p>
+                <p>+7 (000) 000-00-00</p>
+            </div>
+            <div class="contact-btn">
+                <a href="basket.html">КОРЗИНА</a> <!-- Изменено на .html -->
+            </div>
+            </div>
+        </div>
+
+        <nav class="menu">
+        <div class="catalog-button">
+        <a href="catalog.html" class="dropbtn">Каталог</a> <!-- Изменено на .html -->
+    </div>
+            <div class="menu-container">
+            <a href="index.html">Главная</a> <!-- Изменено на .html -->
+            <a href="about.html">О нас</a> <!-- Изменено на .html -->
+            <a href="catalog.html">Каталог</a> <!-- Осталось .html -->
+            <a href="contacts.html">Где нас найти</a> <!-- Изменено на .html -->
+            <a href="login.html">Вход</a> <!-- Изменено на .html -->
+            <a href="register.html">Регистрация</a> <!-- Изменено на .html -->
+        </div>
+    </nav>
+    </div>
+</div>
+</header>
+
+
+    <section class="hero-product2">
+    <h1 class="hero-title2">КАТАЛОГ ТОВАРОВ</h1>
+    <div class="products2">
+        <a href="#" class="product-link2" data-category="kraski">
+            <div class="product-item2">
+                <div class="product-image2">
+                    <img src="images/краски.jpg" alt="Краски">
+                </div>
+                <h3>КРАСКИ</h3>
+            </div>
+        </a>
+        <a href="#" class="product-link2" data-category="imal">
+            <div class="product-item2">
+                <div class="product-image2">
+                    <img src="images/эмаль.jpg" alt="Эмаль">
+                </div>
+                <h3>ЭМАЛЬ</h3>
+            </div>
+        </a>
+        <a href="#" class="product-link2" data-category="shpaklevka">
+            <div class="product-item2">
+                <div class="product-image2">
+                    <img src="images/шпаклевка.jpg" alt="Шпаклевка">
+                </div>
+                <h3>ШПАКЛЕВКА</h3>
+            </div>
+        </a>
+        <a href="#" class="product-link2" data-category="tools">
+            <div class="product-item2">
+                <div class="product-image2">
+                    <img src="images/инструменты.jpg" alt="Инструменты">
+                </div>
+                <h3>ИНСТРУМЕНТЫ</h3>
+            </div>
+        </a>
+    </div>
+</section>
+
+    
+    <section class="catalog">
+   
+    <div class="istori">
+            <a href="index.html">Главная</a> > <a href="catalog.html">Каталог</a> <!-- Изменено на .html -->
+        </div>
+           
+        </div>
+        <div class="products">
+            
+        </div>
+    </section>
+
+    
+      <!-- Секция для деталей товара -->
+      <section id="product-detail" style="display: none;">
+     
+        <div class="istori">
+            <a href="index.html">Главная</a> > <a href="catalog.html">Каталог</a> > <span id="istori"></span> <!-- Изменено на .html -->
+        </div>
+        <div class="product-detail-content">
+            <div class="product-image">
+                <img id="detail-image" src="" alt="Изображение товара">
+            </div>
+            <div class="product-info">
+                <h3 id="detail-name"></h3>
+                <p id="detail-price"></p>
+                <!-- Форма добавления в корзину (не будет работать в статике) -->
+                <form onsubmit="event.preventDefault(); alert('Функция добавления в корзину не работает в статике');">
+    <input type="hidden" name="product_id" id="product_id" value="">
+    <input type="number" name="quantity" value="1" min="1" disabled> <!-- Отключено -->
+    <button type="submit" name="add_to_cart" disabled>Добавить в корзину (PHP)</button> <!-- Отключено -->
+</form>
+            </div>
+        </div>
+        <div class="product-description">
+            <p id="detail-description"></p>
+        </div>
+    </section> 
+    
+    <footer class="footer">
+        <p>© 2025 PaintLab. Все права защищены.</p>
+    </footer>
+    <script src="js/scripts.js">
+ 
+    </script>
+</body>
+</html>

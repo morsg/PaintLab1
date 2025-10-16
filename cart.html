@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo"> 
+            <img src="images/PaintLab.png" alt="Логотип" class="logo"> 
+         
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact">
+                    <p>+7 (000) 000-00-00</p>
+                    <p>+7 (000) 000-00-00</p>
+                </div>
+                    <div class="contact-btn">
+                    <a href="basket.html">КОРЗИНА</a> <!-- Изменено на .html -->
+                </div>
+                </div>
+            </div>
+
+            <nav class="menu">
+        <div class="catalog-button">
+        <a href="catalog.html" class="dropbtn">Каталог</a> <!-- Изменено на .html -->
+    </div>
+            <div class="menu-container">
+            <a href="index.html">Главная</a> <!-- Изменено на .html -->
+            <a href="about.html">О нас</a> <!-- Изменено на .html -->
+            <a href="catalog.html">Каталог</a> <!-- Изменено на .html -->
+            <a href="contacts.html">Где нас найти</a> <!-- Изменено на .html -->
+            <a href="login.html">Вход</a> <!-- Изменено на .html -->
+            <a href="register.html">Регистрация</a> <!-- Изменено на .html -->
+        </div>
+    </nav>
+</header>
+
+    <section class="cart">
+        <h2>Корзина</h2>
+        <div class="cart-items">
+            <!-- Товары в корзине будут загружены через JavaScript -->
+            <!-- Пример статического контента (если нужно) -->
+            <p>Содержимое корзины загружается динамически. Пример товара:</p>
+            <div class="cart-item">
+                <span>Тестовый товар</span>
+                <span>1 шт.</span>
+                <span>1000 ₽</span>
+            </div>
+        </div>
+        <button class="checkout" onclick="alert('Функция оформления заказа не работает в статике')">Оформить заказ</button>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 PaintLab. Все права защищены.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script> <!-- Подключаем JS, если нужен -->
+</body>
+</html>
