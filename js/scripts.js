@@ -146,29 +146,43 @@ if (heroProductSection) {
             e.preventDefault();
             const category = e.currentTarget.getAttribute("data-category");
 
-            // Если мы находимся на index.php, перенаправляем на catalog.php с параметром категории
-            if (window.location.pathname.includes("index.php")) {
-                window.location.href = `catalog.php?category=${category}`;
-            } else {
-                // Если мы уже на catalog.php, просто отображаем товары
-                showProducts(category);
 
-                // Обновляем историю переходов
-                const istori = document.querySelector(".istori");
-                if (istori) {
-                    istori.innerHTML = `
-                        <a href="index.php">Главная</a> > 
-                        <a href="catalog.php">Каталог</a> > 
-                        <span>${e.currentTarget.querySelector("h3").textContent}</span>
-                    `;
-                }
+// Если мы находимся на index.html, перенаправляем на catalog.html с параметром категории
+if (window.location.pathname.includes("index.html")) {
+    window.location.href = `catalog.html?category=${category}`;
+} else {
+    // Если мы уже на catalog.html, просто отображаем товары
+    showProducts(category);
 
-                // Прокручиваем страницу к секции каталога
-                document.querySelector(".catalog").scrollIntoView({ behavior: "smooth" });
-            }
+    // ПОКАЗЫВАЕМ и обновляем историю переходов
+    const istori = document.querySelector(".catalog .istori");
+    if (istori) {
+        istori.style.display = 'block'; // ПОКАЗЫВАЕМ навигацию
+        istori.innerHTML = `
+            <a href="index.html">Главная</a> > 
+            <a href="catalog.html">Каталог</a> > 
+            <span>${e.currentTarget.querySelector("h3").textContent}</span>
+        `;
+    }
+
+    // Прокручиваем страницу к секции каталога
+    document.querySelector(".catalog").scrollIntoView({ behavior: "smooth" });
+}
         });
     });
 }
+
+// Показываем и обновляем навигацию
+const istori = document.getElementById("catalog-istori");
+if (istori) {
+    istori.style.display = 'none';
+    istori.innerHTML = `
+        <a href="index.html">Главная</a> > 
+        <a href="catalog.html">Каталог</a> > 
+        <span>${e.currentTarget.querySelector("h3").textContent}</span>
+    `;
+}
+
 
 // Загрузка товаров при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {

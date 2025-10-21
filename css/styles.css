@@ -3,6 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    background-color: #e5f0fc;
 }
 
 .header {
@@ -48,7 +49,7 @@ body {
 }
 
 .menu {
-    background: #ffffff;
+    background-color: #e5f0fc;
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -126,11 +127,11 @@ body {
 
 .top-bar {
     background: #ffffff;
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
+    background-color: #e5f0fc;
 }
 
 .contact-wrapper {
@@ -305,7 +306,7 @@ a {
     display: flex;
     justify-content: center; 
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #e5f0fc;
 }
 
 .about-content {
@@ -430,7 +431,7 @@ a {
 
 /* Стили для товара */
 #product-detail {
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     border-radius: 10px;
     margin-top: 20px;
@@ -438,7 +439,7 @@ a {
     flex-direction: column;
     align-items: center; /* Центрируем всё по горизонтали */
     text-align: center; /* Центрируем текст */
-    width: 950px;
+    width: 930px;
     margin: 0 auto;
 }
 
@@ -465,11 +466,9 @@ a {
     max-height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease; /* Анимация при наведении */
+
 }
 
-.product-detail-content .product-image img:hover {
-    transform: scale(1.15); /* Увеличение изображения при наведении */
-}
 
 .product-detail-content .product-info {
     text-align: center; /* Центрируем текст */
@@ -508,7 +507,7 @@ a {
     color: #555;
     text-align: center; /* Центрируем описание */
     width: 100%; /* Занимает всю ширину */
-    
+    padding: 10px;
 }
 .catalog {
     padding: 20px;
@@ -684,7 +683,6 @@ a {
 }
 
 
-
 .istori {
     font-size: 0.9rem;
     background-color: #f8f9fa; /* Фон для видимости */
@@ -699,11 +697,16 @@ a {
 .istori a {
     color: #222222;
     font-size: 17px;
-   
+
 }
-.istori a:hover {
-    text-decoration: none;
-}
+
+  .istori a.a2 {
+     color: #b32121;
+     text-decoration: none;
+     pointer-events: auto;
+     position: relative;
+     z-index: 1;
+ }
 
 .button {
     padding: 10px 20px;

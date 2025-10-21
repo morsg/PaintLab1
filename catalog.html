@@ -85,9 +85,9 @@
     
     <section class="catalog">
    
-    <div class="istori">
-            <a href="index.html">Главная</a> > <a href="catalog.html">Каталог</a> <!-- Изменено на .html -->
-        </div>
+    <div id="catalog-istori" class="istori" style="display: none;"> 
+        <a href="index.html">Главная</a> > <a href="catalog.html">Каталог</a> 
+    </div>
            
         </div>
         <div class="products">
@@ -100,7 +100,7 @@
       <section id="product-detail" style="display: none;">
      
         <div class="istori">
-            <a href="index.html">Главная</a> > <a href="catalog.html">Каталог</a> > <span id="istori"></span> <!-- Изменено на .html -->
+            <a href="index.html">Главная</a> > <a href="catalog.html" class="a2">Назад</a>  <!-- Изменено на .html -->
         </div>
         <div class="product-detail-content">
             <div class="product-image">
@@ -113,7 +113,7 @@
                 <form onsubmit="event.preventDefault(); alert('Функция добавления в корзину не работает в статике');">
     <input type="hidden" name="product_id" id="product_id" value="">
     <input type="number" name="quantity" value="1" min="1" disabled> <!-- Отключено -->
-    <button type="submit" name="add_to_cart" disabled>Добавить в корзину (PHP)</button> <!-- Отключено -->
+    <button type="submit" name="add_to_cart" disabled>Добавить в корзину</button> <!-- Отключено -->
 </form>
             </div>
         </div>
