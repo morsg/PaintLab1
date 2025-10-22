@@ -198,6 +198,7 @@ a {
     width: 100%;
     display: block;
     border-radius: 10px;
+    min-width: 90px; 
 }
 
 /* Кнопки управления */
