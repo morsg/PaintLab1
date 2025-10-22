@@ -267,7 +267,7 @@ a {
     object-fit: contain;
     max-width: none;
     max-height: 90%;
-    min-width: 360.494px;
+    min-width: 290.494px;
     height: 240px;
 }
 
@@ -442,6 +442,7 @@ a {
     text-align: center; /* Центрируем текст */
     width: 930px;
     margin: 0 auto;
+    margin-bottom: 25px;
 }
 
 .product-detail-content {

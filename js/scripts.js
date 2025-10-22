@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Данные для товаров
 const products = {
     kraski: [
-        { id: 1, name: "Краска для стен и потолков глубокоматовая база BW", price: "1900 ₽", image: "images/kraski1.jpg", description: "DULUX DIAMOND EXTRA MATT / ДЮЛАКС ДАЙМОНД ЭКСТРА МАТ краска для стен и потолков глубокоматовая база BW 1л" },
+        { id: 1, name: "Краска для стен и потолков глубокоматовая база BW", price: "1900 ₽", image: "images/pc1.png", description: "DULUX DIAMOND EXTRA MATT / ДЮЛАКС ДАЙМОНД ЭКСТРА МАТ краска для стен и потолков глубокоматовая база BW 1л" },
         { id: 2, name: "Краска акрилатная для внутренних работ, мат, баз А", price: "850 ₽", image: "images/kraski2.jpg", description: "VINCENT I 3 краска акрилатная для внутренних работ, мат, баз А (0,8л)" },
         { id: 3, name: "Краска для стен и потолков матовая база BW", price: "970 ₽", image: "images/kraski3.jpg", description: "DULUX BINDO 7 ЭКСТРАПРОЧНАЯ / ДЮЛАКС БИНДО 7 ЭКСТРАПРОЧНАЯ краска для стен и потолков матовая база BW 1л" },
         { id: 4, name: "Краска интерьерная, белоснежная, для стен и потолков", price: "200 ₽", image: "images/kraski4.jpg", description: "VGT / ВГТ ВД-АК-2180 краска интерьерная, белоснежная, для стен и потолков, влагостойкая, матовая (1,5кг)" },
@@ -45,6 +45,7 @@ const products = {
         { id: 6, name: "Краска для стен и потолка (ПРОФИ А)", price: "500 ₽", image: "images/kraski6.jpg", description: "ТЕКС МОЮЩАЯСЯ краска для стен и потолка (ПРОФИ А) (0,9л)" },
         { id: 7, name: "Краска матовая для внутренних работ, моющаяся, база BW", price: "260 ₽", image: "images/kraski7.jpg", description: "MARSHALL EXPORT 7 / МАРШАЛЛ ЭКСПОРТ 7 матовая краска для внутренних работ, моющаяся, база BW (4,5л)" },
         { id: 8, name: "Краска для стен потолков, матовая высокоукрывистая,базаС", price: "800 ₽", image: "images/kraski8.jpg", description: "VINCENT CONFORMAT / ВИНСЕНТ КОНФОРМАТ краска для стен и потолков профессиональная износостойкая глубоко матовая высокоукрывистая, база С, 0,7 л" },
+        
     ],
     imal: [
         { id: 9, name: "Эмаль высоко прочная, глянц, база А", price: "1500 ₽", image: "images/эмаль1.jpg", description: "TIKKURILA EURO MIRALKYD 90 эмаль высоко глянц, баз А (0,9л)" },
