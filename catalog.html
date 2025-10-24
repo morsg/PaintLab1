@@ -11,9 +11,9 @@
         <div class="top-bar">
             <div class="page-container">
             <div class="header_top-bar">
-            <div class="logo-container"> <!-- Новый контейнер для логотипа и текста -->
+            <div class="logo-container"> 
                 <img src="images/ТокТехника+ 1.png" alt="Логотип" class="logo"> 
-                <div class="logo-text">Сервисный магазин техники</div> <!-- Новый текст под логотипом -->
+                <div class="logo-text">Сервисный магазин техники</div>
             </div>
             <div class="contact-wrapper">
             <div class="contact">
@@ -21,32 +21,25 @@
                 <p>+7 (000) 000-00-00</p>
             </div>
             <div class="contact-row">
-                <p class="city">г. Ульяновск</p> <!-- Город слева от второго номера -->
+                <p class="city">г. Ульяновск</p> 
                 </div>
                 <div class="contact-btn">
-                <a href="basket.html">КОРЗИНА</a> <!-- Заменил на .html -->
+                <a href="basket.html">КОРЗИНА</a> 
             </div>
             </div>
         </div>
 
         <nav class="menu">
         <div class="catalog-button">
-        <a href="catalog.html" class="dropbtn">Профиль</a> <!-- Заменил на .html -->
-        <div class="dropdown-content">
-            <!-- Если есть подкатегории, можно добавить ссылки -->
-            <a href="catalog.html">Краски</a>
-            <a href="catalog.html">Эмали</a>
-            <a href="catalog.html">Шпаклевки</a>
-            <a href="catalog.html">Инструменты</a>
-        </div>
+        <a href="profil.html" class="dropbtn">Профиль</a> 
     </div>
             <div class="menu-container">
-            <a href="index.html">Главная</a> <!-- Заменил на .html -->
-            <a href="about.html">О нас</a> <!-- Заменил на .html -->
-            <a href="catalog.html">Каталог</a> <!-- Заменил на .html -->
-            <a href="contacts.html">Где нас найти</a> <!-- Заменил на .html -->
-            <a href="login.html">Вход</a> <!-- Заменил на .html -->
-            <a href="register.html">Регистрация</a> <!-- Заменил на .html -->
+            <a href="index.html">Главная</a> 
+            <a href="about.html">О нас</a> 
+            <a href="catalog.html">Каталог</a> 
+            <a href="contacts.html">Где нас найти</a> 
+            <a href="login.html">Вход</a> 
+            <a href="register.html">Регистрация</a> 
         </div>
     </nav>
     </div>
@@ -57,7 +50,7 @@
     <section class="hero-product1">
 <h1 class="hero-title1">НАША ПРОДУКЦИЯ</h1>
     <div class="products1">
-    <a href="catalog.html" class="product-link1"> <!-- Заменил на .html -->
+    <a href="catalog.html" class="product-link1"> 
         <div class="product-item1">
             <div class="product-image1">
                 <img src="images/pc1.png" class="pc" alt="Компьютеры">
@@ -65,7 +58,7 @@
             <h3>Компьютеры</h3>
         </div>
     </a>
-        <a href="catalog.html" class="product-link1"> <!-- Заменил на .html -->
+        <a href="catalog.html" class="product-link1"> 
         <div class="product-item1">
             <div class="product-image1">
                 <img src="images/complect.png" alt="Комплектующие">
@@ -78,10 +71,10 @@
             <div class="product-image1">
                 <img src="images/setevoe.png" alt="Сетевые компоненты">
             </div>
-            <h3 class="short-text">Сетевые компоненты</h3> <!-- Добавлен класс short-text -->
+            <h3 class="short-text">Сетевые компоненты</h3> 
         </div>
     </a>
-        <a href="catalog.html" class="product-link1"> <!-- Заменил на .html -->
+        <a href="catalog.html" class="product-link1"> 
         <div class="product-item1">
             <div class="product-image1">
                 <img src="images/noutbuk.png" alt="Ноутбуки">
@@ -106,11 +99,10 @@
     </section>
 
     
-      <!-- Секция для деталей товара -->
       <section id="product-detail" style="display: none;">
      
         <div class="istori">
-            <a href="index.html">Главная</a> > <a href="catalog.html" class="a2">Назад</a>  <!-- Изменено на .html -->
+            <a href="index.html">Главная</a> > <a href="catalog.html" class="a2">Назад</a> 
         </div>
         <div class="product-detail-content">
             <div class="product-image">
@@ -119,11 +111,10 @@
             <div class="product-info">
                 <h3 id="detail-name"></h3>
                 <p id="detail-price"></p>
-                <!-- Форма добавления в корзину (не будет работать в статике) -->
                 <form onsubmit="event.preventDefault(); alert('Функция добавления в корзину не работает в статике');">
     <input type="hidden" name="product_id" id="product_id" value="">
-    <input type="number" name="quantity" value="1" min="1" disabled> <!-- Отключено -->
-    <button type="submit" name="add_to_cart" disabled>Добавить в корзину</button> <!-- Отключено -->
+    <input type="number" name="quantity" value="1" min="1" disabled>
+    <button type="submit" name="add_to_cart" disabled>Добавить в корзину</button> 
 </form>
             </div>
         </div>
@@ -140,10 +131,10 @@
         <div class="footer-info">
             <p class="footer-text">© 2025 ТокТехника+. Все права защищены.</p>
             <p class="footer-contact">Телефон: +7 (000) 000-00-00</p>
-            <p class="footer-contact">Email: info@toktehnika.ru</p> <!-- Замени на реальный email -->
+            <p class="footer-contact">Email: info@toktehnika.ru</p> 
             <div class="footer-social">
-                <a href="https://t.me/your_telegram" target="_blank" class="social-link">Telegram</a> <!-- Замени на реальную ссылку -->
-                <a href="https://vk.com/your_vk" target="_blank" class="social-link">VK</a> <!-- Замени на реальную ссылку -->
+                <a href="https://t.me/your_telegram" target="_blank" class="social-link">Telegram</a> 
+                <a href="https://vk.com/your_vk" target="_blank" class="social-link">VK</a> 
             </div>
         </div>
     </div>

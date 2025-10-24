@@ -97,12 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-
-
-
 // Данные для товаров
 const products = {
     "Компьютеры": [

@@ -10,62 +10,54 @@
         <div class="top-bar">
             <div class="page-container">
             <div class="header_top-bar">
-            <div class="logo-container"> <!-- Новый контейнер для логотипа и текста -->
+            <div class="logo-container">
                 <img src="images/ТокТехника+ 1.png" alt="Логотип" class="logo"> 
-                <div class="logo-text">Сервисный магазин техники</div> <!-- Новый текст под логотипом -->
-            </div>
+                <div class="logo-text">Сервисный магазин техники</div>
             <div class="contact-wrapper">
             <div class="contact">
                 <p>+7 (000) 000-00-00</p>
                 <p>+7 (000) 000-00-00</p>
             </div>
             <div class="contact-row">
-                <p class="city">г. Ульяновск</p> <!-- Город слева от второго номера -->
+                <p class="city">г. Ульяновск</p> 
                 </div>
                 <div class="contact-btn">
-                <a href="basket.html">КОРЗИНА</a> <!-- Заменил на .html -->
+                <a href="basket.html">КОРЗИНА</a> 
             </div>
             </div>
         </div>
 
         <nav class="menu">
         <div class="catalog-button">
-        <a href="catalog.html" class="dropbtn">Профиль</a> <!-- Заменил на .html -->
-        <div class="dropdown-content">
-            <!-- Если есть подкатегории, можно добавить ссылки -->
-            <a href="catalog.html">Краски</a>
-            <a href="catalog.html">Эмали</a>
-            <a href="catalog.html">Шпаклевки</a>
-            <a href="catalog.html">Инструменты</a>
-        </div>
+       <a href="profil.html" class="dropbtn">Профиль</a> 
+       
     </div>
             <div class="menu-container">
-            <a href="index.html">Главная</a> <!-- Заменил на .html -->
-            <a href="about.html">О нас</a> <!-- Заменил на .html -->
-            <a href="catalog.html">Каталог</a> <!-- Заменил на .html -->
-            <a href="contacts.html">Где нас найти</a> <!-- Заменил на .html -->
-            <a href="login.html">Вход</a> <!-- Заменил на .html -->
-            <a href="register.html">Регистрация</a> <!-- Заменил на .html -->
+            <a href="index.html">Главная</a> 
+            <a href="about.html">О нас</a> 
+            <a href="catalog.html">Каталог</a> 
+            <a href="contacts.html">Где нас найти</a> 
+            <a href="login.html">Вход</a> 
+            <a href="register.html">Регистрация</a> 
         </div>
     </nav>
     </div>
 </div>
 </header>
     <h1>Управление товарами</h1>
-    <!-- Форма добавления товара (не будет работать на статическом сайте) -->
+  
     <form>
         <input type="text" name="name" placeholder="Название" required>
         <input type="number" name="price" placeholder="Цена" required>
         <textarea name="description" placeholder="Описание" required></textarea>
         <input type="text" name="image" placeholder="Ссылка на изображение" required>
         <input type="number" name="category_id" placeholder="ID категории" required>
-        <button type="submit" disabled>Добавить товар</button> <!-- Кнопка отключена -->
+        <button type="submit" disabled>Добавить товар</button> 
     </form>
 
     <h2>Список товаров</h2>
     <p>Список товаров подгружается из базы данных (PHP). На статическом сайте отображается пример:</p>
     <ul>
-        <!-- Пример статических товаров -->
         <li>
             <h3>Тестовый товар 1</h3>
             <p>Цена: 1000 руб.</p>
