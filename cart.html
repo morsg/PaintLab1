@@ -7,37 +7,50 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header">
+   <header class="header">
         <div class="top-bar">
-            <div class="logo"> 
-            <img src="images/PaintLab.png" alt="Логотип" class="logo"> 
-         
+            <div class="page-container">
+            <div class="header_top-bar">
+            <div class="logo-container"> <!-- Новый контейнер для логотипа и текста -->
+                <img src="images/ТокТехника+ 1.png" alt="Логотип" class="logo"> 
+                <div class="logo-text">Сервисный магазин техники</div> <!-- Новый текст под логотипом -->
             </div>
-
             <div class="contact-wrapper">
-                <div class="contact">
-                    <p>+7 (000) 000-00-00</p>
-                    <p>+7 (000) 000-00-00</p>
-                </div>
-                    <div class="contact-btn">
-                    <a href="basket.html">КОРЗИНА</a> <!-- Изменено на .html -->
-                </div>
-                </div>
+            <div class="contact">
+                <p>+7 (000) 000-00-00</p>
+                <p>+7 (000) 000-00-00</p>
             </div>
+            <div class="contact-row">
+                <p class="city">г. Ульяновск</p> <!-- Город слева от второго номера -->
+                </div>
+                <div class="contact-btn">
+                <a href="basket.html">КОРЗИНА</a> <!-- Заменил на .html -->
+            </div>
+            </div>
+        </div>
 
-            <nav class="menu">
+        <nav class="menu">
         <div class="catalog-button">
-        <a href="catalog.html" class="dropbtn">Каталог</a> <!-- Изменено на .html -->
+        <a href="catalog.html" class="dropbtn">Профиль</a> <!-- Заменил на .html -->
+        <div class="dropdown-content">
+            <!-- Если есть подкатегории, можно добавить ссылки -->
+            <a href="catalog.html">Краски</a>
+            <a href="catalog.html">Эмали</a>
+            <a href="catalog.html">Шпаклевки</a>
+            <a href="catalog.html">Инструменты</a>
+        </div>
     </div>
             <div class="menu-container">
-            <a href="index.html">Главная</a> <!-- Изменено на .html -->
-            <a href="about.html">О нас</a> <!-- Изменено на .html -->
-            <a href="catalog.html">Каталог</a> <!-- Изменено на .html -->
-            <a href="contacts.html">Где нас найти</a> <!-- Изменено на .html -->
-            <a href="login.html">Вход</a> <!-- Изменено на .html -->
-            <a href="register.html">Регистрация</a> <!-- Изменено на .html -->
+            <a href="index.html">Главная</a> <!-- Заменил на .html -->
+            <a href="about.html">О нас</a> <!-- Заменил на .html -->
+            <a href="catalog.html">Каталог</a> <!-- Заменил на .html -->
+            <a href="contacts.html">Где нас найти</a> <!-- Заменил на .html -->
+            <a href="login.html">Вход</a> <!-- Заменил на .html -->
+            <a href="register.html">Регистрация</a> <!-- Заменил на .html -->
         </div>
     </nav>
+    </div>
+</div>
 </header>
 
     <section class="cart">
@@ -55,9 +68,22 @@
         <button class="checkout" onclick="alert('Функция оформления заказа не работает в статике')">Оформить заказ</button>
     </section>
 
-    <footer class="footer">
-        <p>© 2025 PaintLab. Все права защищены.</p>
-    </footer>
+   <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/ТокТехника+ 1.png" alt="Логотип ТокТехника+" class="footer-logo-img">
+        </div>
+        <div class="footer-info">
+            <p class="footer-text">© 2025 ТокТехника+. Все права защищены.</p>
+            <p class="footer-contact">Телефон: +7 (000) 000-00-00</p>
+            <p class="footer-contact">Email: info@toktehnika.ru</p> <!-- Замени на реальный email -->
+            <div class="footer-social">
+                <a href="https://t.me/your_telegram" target="_blank" class="social-link">Telegram</a> <!-- Замени на реальную ссылку -->
+                <a href="https://vk.com/your_vk" target="_blank" class="social-link">VK</a> <!-- Замени на реальную ссылку -->
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="js/scripts.js"></script> <!-- Подключаем JS, если нужен -->
 </body>

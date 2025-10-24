@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #e5f0fc;
+    background-color: #ffffff;
 }
 
 .header {
@@ -12,12 +12,43 @@ body {
     align-items: center; 
 }
 
+.logo-container {
+    display: flex; /* Располагаем логотип и текст в ряд */
+    flex-direction: column; /* Текст будет под логотипом */
+    align-items: center; /* Центрируем по горизонтали */
+    justify-content: center; /* Центрируем по вертикали */
+}
+
+
+
+.contact-row {
+    display: flex; /* Располагаем второй номер и город в ряд */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 10px; /* Расстояние между вторым номером и городом */
+}
+
+.city {
+    margin: 0; /* Убираем отступы у города */
+    font-size: 14px; /* Можно изменить размер шрифта */
+    color: #000; /* Можно изменить цвет */
+    left: 1040px;
+    position: absolute;
+    padding-top: 29px;
+}
+
+
 .logo {
-    width: 180px;
+    width: 220px;
     max-height: 140px;
-    
+     margin-bottom: 5px; /* Небольшой отступ снизу от логотипа к тексту */
 } 
 
+.logo-text {
+    font-size: 12px; /* Небольшой шрифт */
+    color: #000; /* Цвет текста */
+    text-align: center; /* Центрируем текст */
+    margin: 0; /* Убираем стандартные отступы */
+}
 
 .nav {
     display: flex;
@@ -49,7 +80,7 @@ body {
 }
 
 .menu {
-    background-color: #e5f0fc;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -62,11 +93,12 @@ body {
     color: #000000;
     text-decoration: none;
     padding: 10px 30px;
-    background-color: #9c9c9c;
+    background-color: #ffbb55;
+    
 }
 
 .menu a:hover {
-    background: #bdbcbc;
+    background: #ffa836;
 }
 
 .catalog-button {
@@ -77,14 +109,14 @@ body {
 .catalog-button .dropbtn {
     color: #000000;
     text-decoration: none;
-    background-color: #9c9c9c;
+    background-color: #ffbb55;
     border-radius: 8px;
     transition: background-color 0.3s;
     cursor: pointer;
 }
 
 .catalog-button .dropbtn:hover {
-    background: #bdbcbc;
+    background: #ffa836;
 }
 
 .catalog-button .dropdown-content {
@@ -131,7 +163,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: #e5f0fc;
+    background-color: #ffffff;
 }
 
 .contact-wrapper {
@@ -153,17 +185,17 @@ body {
 }
 
 a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
 .contact-btn:hover {
-    background-color: #b1b1b1;
+    background-color: #ffa836;
     text-decoration: none;
 }
 
 .contact-btn {
-    background: #858585;
+    background: #ffbb55;
     padding: 10px 15px;
     color: #fff;
     text-decoration: none;
@@ -174,69 +206,115 @@ a {
 }
 
 
- /* Основной контейнер слайдера */
+.hero-slider {
+    padding: 20px 0; /* Отступы сверху и снизу */
+    /* Остальные стили будут внутри .slider-container */
+}
+
 .slider-container {
-    margin: 20px auto;
     position: relative;
-    width: 50%;
-    overflow: hidden;
+    max-width: 948px; /* Примерная ширина, как у .about-container */
+    margin: 0 auto; /* Центрируем */
+    border-radius: 10px; /* Скругление углов, как у .about-container */
+    overflow: hidden; /* Обрезаем всё, что выходит за границы */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.164); /* Тень, как у .about-container */
+    height: 500px; /* Установим фиксированную высоту, как у .about-container */
+    display: flex; /* Для центрирования track и кнопок */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.slider-track {
     display: flex;
-    justify-content: center;
+    transition: transform 0.5s ease-in-out; /* Плавный переход */
+    height: 100%;
+    width: 100%; /* Занимает всю ширину контейнера */
 }
 
-/* Контейнер слайдов */
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
+.slider-slide {
+    min-width: 100%; /* Каждый слайд занимает всю ширину контейнера */
+    height: 100%;
+    display: flex; /* Для центрирования изображения */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    overflow: hidden; /* Обрезаем всё, что выходит за границы слайда */
 }
 
-.slide {
-    min-width: 100%; 
+.slider-slide img {
+    width: 948px;
+    max-height: 100%;
+    object-fit: cover; /* Заполняем слайд, сохраняя пропорции */
+    border-radius: 10px; /* Скругление углов изображения */
 }
 
-.slide img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    min-width: 90px; 
-}
-
-/* Кнопки управления */
-.left-btn, .right-btn {
+.slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
     z-index: 10;
+    border-radius: 5px; /* Скругление кнопок */
+    opacity: 0; /* Скрываем по умолчанию */
+    transition: opacity 0.3s; /* Плавное появление/исчезновение */
 }
 
-.left-btn {
+.slider-container:hover .slider-btn {
+    opacity: 1; /* Показываем кнопки при наведении на контейнер */
+}
+
+.slider-btn-left {
     left: 10px;
 }
 
-.right-btn {
+.slider-btn-right {
     right: 10px;
 }
 
+.slider-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Расстояние между индикаторами */
+    z-index: 10;
+}
+
+.slider-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.slider-indicator.active {
+    background-color: white; /* Цвет активного индикатора */
+}
+ 
+
 /* Наша продукция (главная) */
-.hero-product1{
+.hero-product1,
+.hero-product {
     text-align: center;
     padding: 20px 20px;
 
 }
 
-.hero-title1 {
+.hero-title1,
+.hero-title {
     font-size: 28px; 
     color: #333;
     margin-bottom: 55px; 
 }
 
-.products1 {
+.products1, 
+.products {
     display: flex; 
     justify-content: center;
     gap: 20px; 
@@ -267,7 +345,7 @@ a {
     object-fit: contain;
     max-width: none;
     max-height: 90%;
-    min-width: 290.494px;
+    min-width: 280.494px;
     height: 240px;
 }
 
@@ -275,8 +353,27 @@ a {
     font-size: 1.4rem;
     color: #333;
     margin: 15px 0 0px; 
-    white-space: nowrap; 
 }
+
+/* Стиль для h3 с классом short-text */
+.product-item1 h3.short-text {
+    font-size: 1.4rem; /* Уменьшаем размер шрифта */
+    white-space: normal; /* Позволяем перенос */
+    word-wrap: break-word; /* Разбиваем длинные слова, если нужно */
+    text-align: center; /* Убедимся, что текст центрирован */
+    margin: 9px 0 0px; /* Сохраняем отступ */
+    color: #333; /* Сохраняем цвет */
+}
+
+/* --- НОВОЕ --- */
+/* Уменьшаем высоту изображения в карточке с классом short-text */
+.product-item1:has(h3.short-text) .product-image1 img {
+    height: 220px; /* Уменьшаем высоту изображения */
+    /* min-width может потребовать корректировки */
+    /* min-width: 280.494px; - возможно, нужно уменьшить или убрать */
+    /* object-fit: contain; - оставляем, чтобы изображение масштабировалось */
+}
+
 
 .product-item1 p {
     font-size: 1rem;
@@ -307,7 +404,7 @@ a {
     display: flex;
     justify-content: center; 
     padding: 20px;
-    background-color: #e5f0fc;
+    background-color: #ffffff;
 }
 
 .about-content {
@@ -335,15 +432,15 @@ a {
 .about-container p {
     font-size: 1rem;
     color: #555;
-    line-height: 1.5; 
+    line-height: 1.4; 
     margin-bottom: 15px; 
     
 }
 
 .about-button {
     display: block;
-    background-color: #686868;
-    color: #fff; 
+    background-color: #ffbb55;
+    color: #000000; 
     padding: 10px 20px;
     border-radius: 5px; 
     text-decoration: none; 
@@ -354,7 +451,7 @@ a {
 }
 
 .about-button:hover {
-    background-color: #6e6e6e; 
+    background-color: #ffa836; 
 }
 
 .about-image {
@@ -367,7 +464,7 @@ a {
 }
 
 .about-image img{
-    max-width: 222%; 
+    width: 530px; 
     max-height: 100%; 
     height: auto; 
     border-radius: 10px; 
@@ -375,7 +472,7 @@ a {
 }
 
 .about-feature {
-    background-color: #f1f1f1; 
+    background-color: #ffbb55; 
     padding: 15px;
     border-radius: 10px; 
     margin-bottom: 20px; 
@@ -484,14 +581,15 @@ a {
 }
 
 .product-detail-content .product-info p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #555;
     margin-bottom: 15px;
+
 }
 
 .product-detail-content .product-info button {
-    background-color: #616161;
-    color: #fff;
+    background-color: #ffbb55;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -500,7 +598,7 @@ a {
 }
 
 .product-detail-content .product-info button:hover {
-    background-color: #5a5a5a;
+    background-color: #ffa836;
 }
 
 .product-description {
@@ -512,7 +610,7 @@ a {
     padding: 10px;
 }
 .catalog {
-    padding: 20px;
+    padding: 52px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Центрируем содержимое каталога */
@@ -542,7 +640,7 @@ a {
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     justify-content: center; /* Центрируем карточки товаров */
     max-width: 1200px; /* Ограничиваем максимальную ширину контейнера */
     margin: 0 auto; /* Центрируем контейнер на странице */
@@ -595,14 +693,14 @@ a {
 }
 
 .product-info p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 15px;
 }
 
 .product-info button {
-    background-color: #5c5c5c;
-    color: #fff;
+    background-color: #ffbb55;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -611,7 +709,7 @@ a {
 }
 
 .product-info button:hover {
-    background-color: #797979;
+    background-color: #ffa836;
 }
 
 /* Каталог товаров  */ 
@@ -687,7 +785,7 @@ a {
 
 .istori {
     font-size: 0.9rem;
-    background-color: #f8f9fa; /* Фон для видимости */
+    background-color: #ffbb55; /* Фон для видимости */
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -698,12 +796,12 @@ a {
 
 .istori a {
     color: #222222;
-    font-size: 17px;
+    font-size: 16px;
 
 }
 
   .istori a.a2 {
-     color: #b32121;
+     color: #000000;
      text-decoration: none;
      pointer-events: auto;
      position: relative;
@@ -739,22 +837,74 @@ a {
 }
 .login {
     text-align: center;
-    margin-bottom: 20px ;
+    margin-bottom: 445px;
     padding: 20px;
 }
 
 .register {
     text-align: center;
-    margin-bottom: 20px ;
+    margin-bottom: 445px;
     padding: 20px;
+    
 }
 
 .footer {
-    background-color: #4e4e4e;
+    background-color: #ffbb55;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 90px;
-    width: 770px;
-    margin: 0 auto;
-    border-radius: 10px;
+    padding: 90px; /* Оставлено без изменений */
+    width: 770px; /* Оставлено без изменений */
+    margin: 0 auto; /* Оставлено без изменений */
+    border-radius: 10px; /* Оставлено без изменений */
+    display: flex; /* Используем flex для центрирования содержимого */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    height: 30px;
+}
+
+.footer-content {
+    display: flex; /* Располагаем логотип и информацию рядом */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 120px; /* Расстояние между логотипом и информацией */
+    width: 100%; /* Занимает всю ширину футера */
+    max-width: 600px; /* Ограничиваем максимальную ширину содержимого */
+}
+
+.footer-logo {
+    flex-shrink: 0; /* Логотип не сжимается */
+}
+
+.footer-logo-img {
+    width: 200px; /* Установи нужный размер логотипа */
+    height: auto; /* Сохраняем пропорции */
+    display: block;
+    padding: 30px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в столбец */
+
+    color: rgb(0, 0, 0); /* Цвет текста */
+
+}
+
+.footer-text,
+.footer-contact {
+    margin: 5px 0; /* Отступы между строками */
+    font-size: 14px; /* Размер шрифта */
+}
+
+.footer-social {
+    margin-top: 10px; /* Отступ сверху для соцсетей */
+}
+
+.social-link {
+    color: rgb(0, 0, 0); /* Цвет ссылки */
+    margin-right: 15px; /* Отступ справа между ссылками */
+    font-size: 14px; /* Размер шрифта */
+}
+
+.social-link:hover {
+    color: #965000; /* Цвет ссылки при наведении */
 }
